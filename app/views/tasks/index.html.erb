@@ -1,0 +1,15 @@
+<h1>Index of Tasks</h1>
+
+<% @tasks.each do |task| %>
+<li>Title: <%= task.title %> </li>
+<li>click: <%= link_to task.title, task_path(task) %> </li>
+<li> completed? <%= task.completed %> </li>
+
+<br>
+<% end %>
+<br>
+<br>
+<br>
+<br>
+<br>
+<%= link_to 'Create a new task', new_task_path %>
